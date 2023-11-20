@@ -1,0 +1,16 @@
+{
+  "name": "shiny-helpers",
+  "version": "0.0.1",
+  "description": "Typescript types of component helpers for building JS extensions for Shiny apps",
+  "main": "./dist/index.js",
+  "types": "./dist/main.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "author": "Nick Strayer",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/rstudio-shiny": "git+https://github.com/rstudio/shiny#v1.7.4",
+    "typescript": "^5.2.2"
+  }
+}
