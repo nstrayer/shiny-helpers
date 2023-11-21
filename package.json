@@ -1,6 +1,6 @@
 {
   "name": "shiny-helpers",
-  "version": "0.0.2",
+  "version": "0.0.7",
   "description": "Typescript types of component helpers for building JS extensions for Shiny apps",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",

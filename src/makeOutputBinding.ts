@@ -1,5 +1,9 @@
 import { Shiny } from "./OptionalShiny";
 
+/**
+ * A custom element that extends this interface will be treated as an output
+ * binding by Shiny when paired with `makeOutputBinding()`.
+ */
 export interface CustomElementOutput<T> extends HTMLElement {
   value: T;
 }
@@ -10,17 +14,19 @@ export interface CustomElementOutput<T> extends HTMLElement {
  * @param tagName Name of the tag that corresponds to the output binding
  * @returns Nothing
  */
-export function makeOutputBinding<T>(tagName: string) {
+export function makeOutputBinding<El extends CustomElementOutput<T>, T>(
+  tagName: string
+) {
   if (!Shiny) {
     return;
   }
 
   class NewCustomBinding extends Shiny["OutputBinding"] {
-    override find(scope: HTMLElement): JQuery<CustomElementOutput<T>> {
-      return $(scope).find(tagName) as JQuery<CustomElementOutput<T>>;
+    override find(scope: HTMLElement): JQuery<El> {
+      return $(scope).find(tagName) as JQuery<El>;
     }
 
-    override renderValue(el: CustomElementOutput<T>, data: T): void {
+    override renderValue(el: El, data: T): void {
       el.value = data;
     }
   }
