@@ -7,6 +7,7 @@
   "scripts": {
     "build": "tsc"
   },
+  "repository": "https://github.com/nstrayer/shiny-helpers/",
   "author": "Nick Strayer",
   "license": "MIT",
   "devDependencies": {
