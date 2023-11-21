@@ -6,8 +6,6 @@ This is a package with a set of conveneince helpers for extending Shiny with Jav
 
 ## Usage
 
-**Note:** This package is not on NPM yet so these instructions will not yet work
-
 Install the package:
 
 ```bash
