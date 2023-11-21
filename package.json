@@ -8,7 +8,8 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
   },
   "repository": "https://github.com/nstrayer/shiny-helpers/",
   "author": "Nick Strayer",
