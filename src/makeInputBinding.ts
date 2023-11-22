@@ -7,7 +7,11 @@ import { Shiny } from "./OptionalShiny";
 export interface CustomElementInput<T = string> extends HTMLElement {
   id: string;
   value: T;
-  onChangeCallback: (x: boolean) => void;
+  /**
+   * Function to let Shiny know it should look for a new value.
+   * @param allowDeferred Should the value be immediately updated wait to the next event loop?
+   */
+  notifyBindingOfChange: (allowDeferred?: boolean) => void;
 }
 
 /**
@@ -43,12 +47,18 @@ export function makeInputBinding<El extends CustomElementInput<unknown>>(
       return type;
     }
 
-    override subscribe(el: El, callback: (x: boolean) => void): void {
-      el.onChangeCallback = callback;
+    override subscribe(
+      el: El,
+      callback: (allowDeferred: boolean) => void
+    ): void {
+      // This is so that we can appease shiny's callback type which says that the
+      // allowDefered parameter is always required. Our implementation doesn't
+      // need it to be passed, which is the equivalent of passing false.
+      el.notifyBindingOfChange = (ad?: boolean) => callback(ad ?? false);
     }
 
     override unsubscribe(el: El): void {
-      el.onChangeCallback = (_: boolean) => {};
+      el.notifyBindingOfChange = (_?: boolean) => {};
     }
   }
 

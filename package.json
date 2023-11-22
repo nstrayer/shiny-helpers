@@ -1,6 +1,6 @@
 {
   "name": "shiny-helpers",
-  "version": "0.0.7",
+  "version": "0.0.12",
   "description": "Typescript types of component helpers for building JS extensions for Shiny apps",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -14,8 +14,16 @@
   "repository": "https://github.com/nstrayer/shiny-helpers/",
   "author": "Nick Strayer",
   "license": "MIT",
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
   "devDependencies": {
+    "@types/react": "^18.2.38",
+    "@types/react-dom": "^18.2.16",
     "@types/rstudio-shiny": "git+https://github.com/rstudio/shiny#v1.7.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "typescript": "^5.2.2"
   }
 }
