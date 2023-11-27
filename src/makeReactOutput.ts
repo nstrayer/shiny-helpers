@@ -4,7 +4,6 @@ import { createRoot } from "react-dom/client";
 /**
  * Make a custom Shiny input binding using a react component.
  * @param tagName The name of the custom element to create
- * @param initialValue The initial value of the input
  * @param renderComp A function that renders the react component into the custom element
  * @returns A Shiny input binding
  */
