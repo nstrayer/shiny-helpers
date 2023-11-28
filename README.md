@@ -2,21 +2,24 @@
 
 ## What
 
-This is a package with a set of conveneince helpers for extending Shiny with Javascript/Typescript code. It contains functions like `makeInputBinding()` which helps abstract away boilerplate for custom input bindings and also provides Types for the main `Shiny.js`.
+This is a set of packages containing conveneince helpers for extending Shiny with Javascript/Typescript code. It contains functions like `makeInputBinding()` which helps abstract away boilerplate for custom input bindings and also provides Types for the main `Shiny.js`.
 
-## Usage
+Currently the two packages are `@shiny-helpers/main` and `@shiny-helpers/react`.
 
-Install the package:
+## `@shiny-helpers/main`
+
+This is package contains helpers for setting up input and output bindings for Shiny apps. It assumes that Web Components will be the method of choice for creating custom input and output bindings.
+
+### Installing
 
 ```bash
-npm install shiny-helpers
+npm install @shiny-helpers/main
 ```
 
-Import the package:
+### Importing/Using
 
 ```typescript
-import type { Shiny } from "shiny-helpers";
-import { makeInputBinding } from "shiny-helpers";
+import { makeInputBinding } from "@shiny-helpers/main";
 ```
 
 ## Functions
@@ -38,6 +41,24 @@ An element that implements this interface should watch for changes in the `value
 ### `makeOutputBinding()`
 
 Function for creating a custom output binding given a tag name for a custom element (following the `CustomElementOutput` interface.) Function takes care of registering output binding to Shiny.
+
+## Functions in `@shiny-helpers/react`
+
+This package contains helpers for creating custom input and output bindings using React components. Under the hood it encapsulates the react components in web copmponents and handles the communication between the two.
+
+### Installing
+
+```bash
+npm install @shiny-helpers/react
+```
+
+### Importing/Using
+
+```typescript
+import { makeReactInput } from "@shiny-helpers/react";
+```
+
+## Functions
 
 ### `makeReactInput()`
 

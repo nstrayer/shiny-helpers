@@ -1,6 +1,6 @@
 {
   "name": "@shiny-helpers/react",
-  "version": "0.0.13",
+  "version": "0.0.17",
   "description": "React helpers for building Shiny app extensions",
   "main": "dist/index.js",
   "types": "./dist/index.d.ts",
