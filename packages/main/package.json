@@ -1,6 +1,6 @@
 {
-  "name": "@shiny-helpers/main",
-  "version": "0.0.18",
+  "name": "@posit-dev/shiny-binding-main",
+  "version": "0.0.2",
   "description": "Types and helper functions for building JS extensions for Shiny apps",
   "main": "dist/index.js",
   "types": "./dist/index.d.ts",

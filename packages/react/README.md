@@ -1,19 +1,19 @@
-# `@Shiny-Helpers/react`
+# `@posit-dev/shiny-binding-react`
 
 This package contains helpers for creating custom input and output bindings using React components. Under the hood it encapsulates the react components in web copmponents and handles the communication between the two.
 
-## Want to use plain webcomponents isntead of React? See `@shiny-helpers/main`
+## Want to use plain webcomponents instead of React? See `@posit-dev/shiny-binding-main`
 
 ## Installing
 
 ```bash
-npm install @shiny-helpers/react
+npm install @posit-dev/shiny-binding-react
 ```
 
 ## Importing/Using
 
 ```typescript
-import { makeReactInput } from "@shiny-helpers/react";
+import { makeReactInput } from "@posit-dev/shiny-binding-react";
 ```
 
 ## Functions

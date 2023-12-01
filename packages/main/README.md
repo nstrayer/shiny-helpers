@@ -1,19 +1,19 @@
-# `@Shiny-Helpers/main`
+# `@posit-dev/shiny-binding-main`
 
 This is package contains helpers for setting up input and output bindings for Shiny apps. It assumes that Web Components will be the method of choice for creating custom input and output bindings.
 
-## Want to use React instead of webcomponents? See `@shiny-helpers/react`
+## Want to use React instead of webcomponents? See `@posit-dev/shiny-binding-react`
 
 ## Installing
 
 ```bash
-npm install @shiny-helpers/main
+npm install @posit-dev/shiny-binding-main
 ```
 
 ## Importing/Using
 
 ```typescript
-import { makeInputBinding } from "@shiny-helpers/main";
+import { makeInputBinding } from "@posit-dev/shiny-binding-main";
 ```
 
 ## Functions
