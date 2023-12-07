@@ -1,6 +1,6 @@
 {
   "name": "@posit-dev/shiny-binding-react",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "React helpers for building Shiny app extensions",
   "main": "dist/index.js",
   "types": "./dist/index.d.ts",
@@ -17,7 +17,7 @@
   },
   "devDependencies": {},
   "dependencies": {
-    "main": "*",
+    "@posit-dev/shiny-binding-main": "*",
     "@types/react": "^18.2.38",
     "@types/react-dom": "^18.2.16",
     "react": "^18.2.0",
