@@ -4,7 +4,7 @@
 
 This is a monorepo containing packages for extending Shiny with Javascript/Typescript code.
 
-Currently there are two packages: `@shiny-helpers/main` and `@shiny-helpers/react`. See their respective READMEs for more information. [@shiny-helpers/main](packages/main/README.md) [@shiny-helpers/react](packages/react/README.md).
+Currently there are two packages: `@posit-dev/shiny-bindings-core` and `@posit-dev/shiny-bindings-react`. See their respective READMEs for more information. [@posit-dev/shiny-bindings-core](packages/main/README.md) [@posit-dev/shiny-bindings-react](packages/react/README.md).
 
 ## Development
 

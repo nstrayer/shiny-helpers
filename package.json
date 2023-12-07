@@ -1,5 +1,5 @@
 {
-  "name": "@posit-dev/monorepo",
+  "name": "@posit-dev/shiny-bindings-monorepo",
   "version": "0.0.12",
   "description": "Typescript types of component helpers for building JS extensions for Shiny apps",
   "scripts": {
